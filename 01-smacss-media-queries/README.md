@@ -6,16 +6,6 @@ Today we will be covering some new topics and reviewing concepts you should alre
 
 We will spend some time reviewing the concepts from the lab 00 assignments. We will also discuss several new and very important topics, including state, scope, and the "new" keyword.
 
-## Daily Plan
-
-- Overview of 301
-- Review of lab 00 assignments
-- Discussion of context, scope, "this", and "new"
-- Review of CSS floats
-- Introduction to code challenges
-- Introduction of Code Challenge topic
-- Lab Prep
-
 ## Learning Objectives
 
 As as result of completing Lecture 1 of Code 301, students will: 
