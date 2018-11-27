@@ -9,6 +9,7 @@
         background-color: rgb(231, 143, 143);
         box-sizing: border-box;
         border: 1px solid black;
+        line-height: 100px;
         }
         
         
@@ -19,7 +20,7 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
-            
+            line-height: 600px;
         }
         
         .twoThree {
@@ -29,6 +30,7 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
+            line-height: 200px;
         }
         #box1 {
             width: 19.791%;
@@ -37,7 +39,7 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
-            
+            line-height: 250px;
         }
         
         #box2 {
@@ -47,7 +49,7 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
-            
+            line-height: 250px;
         }
     
         #box3 {
@@ -57,7 +59,7 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
-            
+            line-height: 250px;
         }
         
         #box4 {
@@ -67,17 +69,18 @@
             box-sizing: border-box;
             border: 1px solid black;
             float: left;
-            
+            line-height: 250px;
         }
         
         #foot {
         width: 79.167%;
         height: 150px;
-        background-color: rgb(53, 30, 30);
+        background-color: rgb(172, 92, 92);
         box-sizing: border-box;
         border: 1px solid black;
         float: clear;
         float: left;
+        line-height: 150px;
         }
 
 }
