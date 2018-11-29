@@ -13,19 +13,16 @@ Horn.allHorns = [];
 console.log(Horn.allHorns);
 let keyArr = [];
 console.log(keyArr);
-Horn.prototype.render = function() {
-  $('main').append('<div class= "clone"></div>');
-  let hornClone = $('div[class="clone"]');
-  let hornHtml = $('#photo-template').html();
-  hornClone.html(hornHtml);
 
-  hornClone.find('h2').text(this.title);
-  hornClone.find('img').attr('src', this.image_url);
-  hornClone.find('p').text(this.description);
-  // hornClone.find('p').text(this.horns);
-  hornClone.removeClass('clone');
-  hornClone.attr('class', this.title);
+Horn.prototype.render = function() {
+  const $template = $('#hornsTem').html();
+  const $source = Handlebars.compile($template);
+  return $source(this);
 };
+
+
+
+
 let selectRend = () => {
   keyArr.forEach( element => {
     $('select').append('<option class="optClone"></option>');
@@ -49,7 +46,9 @@ Horn.readJson = (page) => {
 };
 
 Horn.loadHorns = () => {
-  Horn.allHorns.forEach(horn => horn.render());
+  Horn.allHorns.forEach(horn => {
+    $('#photo-template').append(horn.render());
+  });
 };
 
 $(() => Horn.readJson('data/page-1.json'));
@@ -79,4 +78,7 @@ $('#pg1').click(function(){
   $(() => Horn.readJson('data/page-1.json'));
 });
 
-//page = 'data/page-2.json';
+// $('#titleBut').click(function(){
+//  Horn.allHorns.sort();
+ 
+// });
