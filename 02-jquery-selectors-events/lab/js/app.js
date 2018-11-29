@@ -10,6 +10,7 @@ function Horn(horn) {
 }
 
 Horn.allHorns = [];
+console.log(Horn.allHorns);
 let keyArr = [];
 console.log(keyArr);
 Horn.prototype.render = function() {
@@ -34,10 +35,11 @@ let selectRend = () => {
     optionClone.removeClass('optClone');
   });
 };
+//var page = 'data/page-1.json';
 
 
-Horn.readJson = () => {
-  $.get('data/page-1.json', 'json')
+Horn.readJson = (page) => {
+  $.get(page, 'json')
     .then(data => {
       data.forEach(obj => {
         Horn.allHorns.push(new Horn(obj));
@@ -50,7 +52,7 @@ Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render());
 };
 
-$(() => Horn.readJson());
+$(() => Horn.readJson('data/page-1.json'));
 
 $('select').on('change',selShow);
 function selShow(){
@@ -60,3 +62,21 @@ function selShow(){
     $('div').not('[class*="'+selItem+'"]').hide();
   }
 }
+
+$('#pg2').click(function(){
+  $('div').remove();
+  $('option').remove();
+  Horn.allHorns = [];
+  keyArr = [];
+  $(() => Horn.readJson('data/page-2.json'));
+});
+
+$('#pg1').click(function(){
+  $('div').remove();
+  $('option').remove();
+  Horn.allHorns = [];
+  keyArr = [];
+  $(() => Horn.readJson('data/page-1.json'));
+});
+
+//page = 'data/page-2.json';
