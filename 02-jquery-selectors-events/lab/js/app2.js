@@ -37,7 +37,7 @@ let selectRend = () => {
 
 
 Horn.readJson = () => {
-  $.get('data/page-1.json', 'json')
+  $.get('data/page-2.json', 'json')
     .then(data => {
       data.forEach(obj => {
         Horn.allHorns.push(new Horn(obj));
